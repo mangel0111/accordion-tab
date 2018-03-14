@@ -1,0 +1,13 @@
+# Build
+lib
+build
+dist
+
+# IDES
+.idea
+.vscode
+
+# Generated Files
+lib/
+dist/
+node_modules/

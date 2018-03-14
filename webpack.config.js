@@ -2,6 +2,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
+	entry: './src/content/js/index.js',
 	output: {
 		filename: 'bundle.js'
 	},
@@ -10,10 +11,12 @@ module.exports = {
 			{ from: './src/index.html' }
 		]),
 		new CopyWebpackPlugin([
+			{ from: './src/alter.html' }
+		]),
+		new CopyWebpackPlugin([
 			{ from: './src/content', to: 'content' }
 		])
 	],
-
 	resolve: {
 		extensions: ['.js', '.jsx']
 	},
